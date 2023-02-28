@@ -18,5 +18,10 @@ module Console1984PryTest
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    config.active_record.encryption.primary_key = "test_primary_key"
+    config.active_record.encryption.deterministic_key = "test_deterministic_key"
+    config.active_record.encryption.key_derivation_salt = "test_derivation_salt"
+    config.console1984.protected_environments = %i[production development]
   end
 end
